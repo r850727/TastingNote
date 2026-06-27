@@ -1202,9 +1202,9 @@ const wineData = [
     "id": 110,
     "category": "烈酒",
     "tag": "高粱",
-    "name": "白水芳華 蘭亭曲\金門高粱 58度",
+    "name": "白水芳華 蘭亭曲\\金門高粱 58度",
     "image": "./images/IMG_2346.jpg",
-    "price": "1300\600",
+    "price": "1300\\600",
     "currency": "TWD",
     "saketime_rank": "-",
     "note": ""

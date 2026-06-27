@@ -37,19 +37,37 @@ let cart = new Set(); // store ids
 
 const JPY_TO_TWD = 0.21; // 匯率設定
 
+function getNumericPrice(priceStr) {
+  if (typeof priceStr === 'number') return priceStr;
+  if (typeof priceStr === 'string' && priceStr.includes('\\')) {
+    const parts = priceStr.split('\\').map(p => parseFloat(p) || 0);
+    return parts.reduce((a, b) => a + b, 0);
+  }
+  return parseFloat(priceStr) || 0;
+}
+
 function getTwdPrice(w) {
-  return w.currency === 'TWD' ? w.price : w.price * JPY_TO_TWD;
+  const numPrice = getNumericPrice(w.price);
+  return w.currency === 'TWD' ? numPrice : numPrice * JPY_TO_TWD;
 }
 
 function formatPriceHtml(w) {
+  if (typeof w.price === 'string' && w.price.includes('\\')) {
+    const parts = w.price.split('\\');
+    if (w.currency === 'TWD') {
+      return `NT$${Number(parts[0]).toLocaleString()}<br>NT$${Number(parts[1]).toLocaleString()}`;
+    }
+  }
+
+  const numPrice = getNumericPrice(w.price);
   if (w.currency === 'TWD') {
-    return `NT$${w.price.toLocaleString()}`;
+    return `NT$${numPrice.toLocaleString()}`;
   } else {
-    const twd = Math.round(w.price * JPY_TO_TWD);
+    const twd = Math.round(numPrice * JPY_TO_TWD);
     if (w.category && w.category.includes('清酒')) {
-      return `¥${w.price.toLocaleString()} <span style="font-size:0.85em; opacity:0.7;">(NT$${twd.toLocaleString()})</span>`;
+      return `¥${numPrice.toLocaleString()} <span style="font-size:0.85em; opacity:0.7;">(NT$${twd.toLocaleString()})</span>`;
     } else {
-      return `NT$${twd.toLocaleString()} <span style="font-size:0.85em; opacity:0.7;">(¥${w.price.toLocaleString()})</span>`;
+      return `NT$${twd.toLocaleString()} <span style="font-size:0.85em; opacity:0.7;">(¥${numPrice.toLocaleString()})</span>`;
     }
   }
 }
@@ -480,23 +498,23 @@ function updateStats(list) {
   statsRow2.style.display = currentCat === "All" ? "flex" : "none";
 
   statTotal.textContent = list.length;
-  
-  const validList = list.filter(w => w.price > 0);
-  const avgEl = document.getElementById("stat-avg");
-  const sumEl = document.getElementById("stat-sum");
-  
-  let totalJpy = 0;
-  let validJpyCount = 0;
-  let totalTwd = 0;
-  
-  validList.forEach(w => {
-    if (w.currency === 'JPY') {
-      totalJpy += w.price;
-      validJpyCount++;
-    } else {
-      totalTwd += w.price;
-    }
-  });
+    const validList = list.filter(w => getNumericPrice(w.price) > 0);
+    const avgEl = document.getElementById("stat-avg");
+    const sumEl = document.getElementById("stat-sum");
+    
+    let totalJpy = 0;
+    let validJpyCount = 0;
+    let totalTwd = 0;
+    
+    validList.forEach(w => {
+      const p = getNumericPrice(w.price);
+      if (w.currency === 'JPY') {
+        totalJpy += p;
+        validJpyCount++;
+      } else {
+        totalTwd += p;
+      }
+    });
 
   if (currentCat === "清酒") {
     // For sake, prioritize JPY
