@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>品飲筆記</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1 id="page-title">品飲筆記</h1>
+    <p class="subtitle" id="page-subtitle">我的品飲收藏紀錄</p>
+  </header>
+
+  <div class="type-tabs" id="category-tabs">
+    <!-- Categories will be injected here -->
+  </div>
+
+  <div id="stats-container">
+    <div class="stats">
+      <div class="stat"><div class="val" id="stat-total">0</div><div class="lbl">總數量</div></div>
+      <div class="stat sp"><div class="val" id="stat-avg">0</div><div class="lbl">平均價格</div></div>
+    </div>
+    <div class="stats" id="stats-row-2" style="margin-top:-10px;">
+      <div class="stat"><div class="val" id="stat-whisky">0</div><div class="lbl">威士忌</div></div>
+      <div class="stat"><div class="val" id="stat-fruit">0</div><div class="lbl">果實酒</div></div>
+      <div class="stat a"><div class="val" id="stat-sake">0</div><div class="lbl">清酒</div></div>
+      <div class="stat"><div class="val" id="stat-spirits">0</div><div class="lbl">烈酒</div></div>
+      <div class="stat b"><div class="val" id="stat-wine">0</div><div class="lbl">葡萄酒</div></div>
+    </div>
+  </div>
+
+  <div class="legend" id="sake-legend" style="display: none;">
+    <div class="legend-row"><span class="badge sp">S+</span><span class="legend-label">Saketime Top 10 (極致享受)</span></div>
+    <div class="legend-row"><span class="badge s">S</span><span class="legend-label">Saketime Top 20 (強烈推薦)</span></div>
+    <div class="legend-row"><span class="badge a">A</span><span class="legend-label">Saketime Top 50 (表現優秀)</span></div>
+    <div class="legend-row"><span class="badge b">B</span><span class="legend-label">Saketime Top 100 (值得品嚐)</span></div>
+    <div class="legend-row"><span class="badge c">C</span><span class="legend-label">知名銘柄</span></div>
+    <div class="legend-row" style="margin-top: 8px; font-size: 0.8em; justify-content: flex-end;"><a href="https://www.saketime.jp/ranking/" target="_blank" style="color: var(--p1); text-decoration: none;">➔ 前往 Saketime 日本酒評價網</a></div>
+  </div>
+
+  <h2>篩選 & 排序</h2>
+  <div class="controls-container">
+    <div class="filters" id="filters">
+      <!-- Dynamic filters will be injected here -->
+    </div>
+
+    <div class="sorts" id="sorts">
+      <!-- Dynamic sorts will be injected here -->
+    </div>
+  </div>
+
+  <div class="actions-bar">
+    <p class="count-label" id="count-label">顯示 0 筆酒款</p>
+    <button id="btn-add-wine" class="fbtn add-btn">+ 新增酒款工具</button>
+  </div>
+
+  <div class="wine-list" id="wine-list">
+    <!-- Cards will be injected here -->
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="wine-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">×</button>
+      <div class="modal-body" id="modal-body">
+        <!-- Content will be injected here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Wine Modal -->
+  <div class="modal-overlay" id="add-modal">
+    <div class="modal-content add-modal-content">
+      <button class="modal-close" id="add-modal-close">×</button>
+      <h2>新增酒款 JSON 產生器</h2>
+      <div class="add-form">
+        <label>名稱: <input type="text" id="add-name"></label>
+        <label>分類: 
+          <select id="add-cat">
+            <option value="清酒">清酒</option>
+            <option value="葡萄酒">葡萄酒</option>
+            <option value="威士忌">威士忌</option>
+            <option value="琴酒">琴酒</option>
+            <option value="果實酒">果實酒</option>
+            <option value="烈酒">烈酒</option>
+            <option value="其他">其他</option>
+          </select>
+        </label>
+        <label>標籤: 
+          <select id="add-tag"></select>
+        </label>
+        <label>價格: 
+          <div style="display: flex; gap: 5px; margin-top: 5px;">
+            <button type="button" class="fbtn active" id="btn-currency-jpy" style="flex: 0 0 auto;">日幣(¥)</button>
+            <button type="button" class="fbtn" id="btn-currency-twd" style="flex: 0 0 auto;">台幣(NT$)</button>
+            <input type="number" id="add-price" style="flex: 1;" placeholder="輸入數字">
+          </div>
+        </label>
+        <label>圖片檔名: <input type="text" id="add-img" placeholder="例如: IMG_1234.jpg"></label>
+        <label id="add-rank-container">評級: 
+          <select id="add-rank">
+            <option value="-">-</option>
+            <option value="S+">S+</option>
+            <option value="S">S</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+        </label>
+        <button class="fbtn sp" style="width:100%; margin-top: 10px;" id="add-generate">產生並複製</button>
+        <textarea id="add-result" readonly rows="5" style="width:100%; margin-top:10px; font-family:monospace; font-size:11px;" placeholder="產生的 JSON 會顯示在這裡"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart / Favorites -->
+  <div class="cart-bar hidden" id="cart-bar">
+    <div class="cart-header" id="cart-header">
+      <span class="cart-icon">❤️</span>
+      <span class="cart-title">我的最愛 (<span id="cart-count">0</span>)</span>
+      <span class="cart-toggle" id="cart-toggle">▲</span>
+    </div>
+    <div class="cart-body" id="cart-body">
+      <div class="cart-items" id="cart-items"></div>
+    </div>
+  </div>
+
+  <!-- Data and App Logic -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
