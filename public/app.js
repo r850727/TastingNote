@@ -65,7 +65,9 @@ const categoryFilters = {
     { group: "種類", label: "調和", filter: "tag-調和威士忌" },
     
     { group: "產區", label: "蘇格蘭高地", filter: "tag-蘇格蘭高地" },
+    { group: "產區", label: "蘇格蘭低地", filter: "tag-蘇格蘭低地" },
     { group: "產區", label: "蘇格蘭斯貝賽", filter: "tag-蘇格蘭斯貝賽" },
+    { group: "產區", label: "蘇格蘭坎貝爾鎮", filter: "tag-蘇格蘭坎貝爾鎮" },
     { group: "產區", label: "蘇格蘭島嶼", filter: "tag-蘇格蘭島嶼區" },
     { group: "產區", label: "蘇格蘭艾雷島", filter: "tag-蘇格蘭艾雷島" },
     { group: "產區", label: "日本", filter: "tag-日本" },
@@ -392,7 +394,7 @@ function renderList(list) {
           <div class="wc-name" title="${w.name}">${w.name}</div>
           <div class="wc-meta">
             ${w.saketime_rank && w.saketime_rank !== '-' ? `<span class="badge ${rankCls}">${w.saketime_rank}</span>` : ''}
-            <span class="badge none">${w.tag}</span>
+            ${w.tag ? w.tag.split('、').map(t => `<span class="badge none">${t}</span>`).join('') : ''}
             <span class="wc-price">${formatPriceHtml(w)}</span>
           </div>
         </div>
@@ -437,7 +439,7 @@ function openModal(id) {
       <div class="modal-tags">
         ${w.saketime_rank && w.saketime_rank !== '-' ? `<span class="badge ${rankCls}">${w.saketime_rank}</span>` : ''}
         <span class="badge none">${w.category}</span>
-        <span class="badge none">${w.tag}</span>
+        ${w.tag ? w.tag.split('、').map(t => `<span class="badge none">${t}</span>`).join('') : ''}
       </div>
       <h3 class="modal-title">${w.name}</h3>
       <div class="modal-price">
