@@ -102,6 +102,11 @@ def parse_markdown():
                 else:
                     tag_clean.append(t)
             
+            if category == "威士忌":
+                has_peat = any("泥煤" in t for t in tag_clean)
+                if not has_peat:
+                    tag_clean.append("無泥煤")
+
             clean_tag = "、".join(tag_clean)
 
             item = {

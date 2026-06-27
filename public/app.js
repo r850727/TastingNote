@@ -60,22 +60,26 @@ const categories = [...new Set([...customOrder, ...wineData.map(w => w.category)
 
 const categoryFilters = {
   "威士忌": [
-    { label: "全部", filter: "all" },
-    { label: "單一麥芽", filter: "tag-單一麥芽威士忌" },
-    { label: "調和", filter: "tag-調和威士忌" },
-    { label: "蘇格蘭高地", filter: "tag-蘇格蘭高地" },
-    { label: "蘇格蘭斯貝賽", filter: "tag-蘇格蘭斯貝賽" },
-    { label: "蘇格蘭島嶼", filter: "tag-蘇格蘭島嶼區" },
-    { label: "蘇格蘭艾雷島", filter: "tag-蘇格蘭艾雷島" },
-    { label: "日本", filter: "tag-日本" },
-    { label: "台灣", filter: "tag-台灣" },
-    { label: "雪莉桶", filter: "tag-雪莉桶" },
-    { label: "波本桶", filter: "tag-波本桶" },
-    { label: "波特桶", filter: "tag-波特桶" },
-    { label: "紅酒桶", filter: "tag-紅酒桶" },
-    { label: "水楢桶", filter: "tag-水楢桶" },
-    { label: "泥煤味", filter: "tag-泥煤味" },
-    { label: "輕泥煤", filter: "tag-輕泥煤" }
+    { group: "種類", label: "全部", filter: "all" },
+    { group: "種類", label: "單一麥芽", filter: "tag-單一麥芽威士忌" },
+    { group: "種類", label: "調和", filter: "tag-調和威士忌" },
+    
+    { group: "產區", label: "蘇格蘭高地", filter: "tag-蘇格蘭高地" },
+    { group: "產區", label: "蘇格蘭斯貝賽", filter: "tag-蘇格蘭斯貝賽" },
+    { group: "產區", label: "蘇格蘭島嶼", filter: "tag-蘇格蘭島嶼區" },
+    { group: "產區", label: "蘇格蘭艾雷島", filter: "tag-蘇格蘭艾雷島" },
+    { group: "產區", label: "日本", filter: "tag-日本" },
+    { group: "產區", label: "台灣", filter: "tag-台灣" },
+
+    { group: "桶型", label: "雪莉桶", filter: "tag-雪莉桶" },
+    { group: "桶型", label: "波本桶", filter: "tag-波本桶" },
+    { group: "桶型", label: "波特桶", filter: "tag-波特桶" },
+    { group: "桶型", label: "紅酒桶", filter: "tag-紅酒桶" },
+    { group: "桶型", label: "水楢桶", filter: "tag-水楢桶" },
+
+    { group: "泥煤強度", label: "泥煤味", filter: "tag-泥煤味" },
+    { group: "泥煤強度", label: "輕泥煤", filter: "tag-輕泥煤" },
+    { group: "泥煤強度", label: "無泥煤", filter: "tag-無泥煤" }
   ],
   "果實酒": [
     { label: "全部", filter: "all" },
@@ -112,9 +116,35 @@ function renderFilters() {
     filters.style.display = "none";
   } else {
     filters.style.display = "flex";
-    filters.innerHTML = filterList.map(f => 
-      `<button class="fbtn ${f.filter === currentFilter ? 'active' : ''}" data-filter="${f.filter}">${f.label}</button>`
-    ).join('');
+    
+    const hasGroups = filterList.some(f => f.group);
+    
+    if (hasGroups) {
+      filters.style.flexDirection = "column";
+      filters.style.gap = "8px";
+      
+      const groups = {};
+      filterList.forEach(f => {
+        const g = f.group || "其他";
+        if(!groups[g]) groups[g] = [];
+        groups[g].push(f);
+      });
+      
+      let html = "";
+      for (const [gName, fArr] of Object.entries(groups)) {
+        html += `<div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+          <span style="font-size:12px; font-weight:bold; color:var(--t2); width:60px;">${gName}</span>
+          ${fArr.map(f => `<button class="fbtn ${f.filter === currentFilter ? 'active' : ''}" data-filter="${f.filter}">${f.label}</button>`).join('')}
+        </div>`;
+      }
+      filters.innerHTML = html;
+    } else {
+      filters.style.flexDirection = "row";
+      filters.style.gap = "8px";
+      filters.innerHTML = filterList.map(f => 
+        `<button class="fbtn ${f.filter === currentFilter ? 'active' : ''}" data-filter="${f.filter}">${f.label}</button>`
+      ).join('');
+    }
   }
 }
 
