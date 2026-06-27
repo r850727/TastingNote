@@ -75,12 +75,14 @@ def parse_markdown():
             # parse price
             price_val = 0
             currency = "JPY"
-            if "NT$" in price_str:
+            
+            # If multiple prices (e.g., NT$1300\NT$600), take the first one
+            first_price_str = price_str.split('\\')[0].split('/')[0]
+            
+            if "NT$" in first_price_str or "NT" in first_price_str:
                 currency = "TWD"
-                price_val = "".join(filter(str.isdigit, price_str))
-            else:
-                price_val = "".join(filter(str.isdigit, price_str))
-                
+            
+            price_val = "".join(filter(str.isdigit, first_price_str))
             price_val = int(price_val) if price_val else 0
 
             # Parse rank from tag
