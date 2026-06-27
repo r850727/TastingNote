@@ -88,12 +88,29 @@ const categoryFilters = {
     { label: "梅酒", filter: "tag-梅酒" }
   ],
   "清酒": [
-    { label: "全部", filter: "all" },
-    { label: "Saketime Top 10", filter: "rank-S+" },
-    { label: "Saketime Top 20", filter: "rank-S" },
-    { label: "Saketime Top 50", filter: "rank-A" },
-    { label: "Saketime Top 100", filter: "rank-B" },
-    { label: "知名銘柄", filter: "rank-C" }
+    { group: "法定等級", label: "全部", filter: "all" },
+    { group: "法定等級", label: "純米大吟釀", filter: "tag-純米大吟釀" },
+    { group: "法定等級", label: "純米吟釀", filter: "tag-純米吟釀" },
+    { group: "法定等級", label: "特別純米", filter: "tag-特別純米" },
+    { group: "法定等級", label: "純米酒", filter: "tag-純米酒" },
+    { group: "法定等級", label: "大吟釀", filter: "tag-大吟釀" },
+    { group: "法定等級", label: "吟釀", filter: "tag-吟釀" },
+    { group: "法定等級", label: "本釀造", filter: "tag-本釀造" },
+    { group: "法定等級", label: "無特定名稱 / 非公開", filter: "tag-無特定名稱 / 非公開" },
+
+    { group: "釀造方式", label: "山廢", filter: "tag-山廢" },
+    { group: "釀造方式", label: "生酛", filter: "tag-生酛" },
+
+    { group: "特殊工藝與狀態", label: "生酒", filter: "tag-生酒" },
+    { group: "特殊工藝與狀態", label: "生詰", filter: "tag-生詰" },
+    { group: "特殊工藝與狀態", label: "氣泡清酒", filter: "tag-氣泡清酒" },
+    { group: "特殊工藝與狀態", label: "貴釀酒", filter: "tag-貴釀酒" },
+
+    { group: "評級", label: "Saketime Top 10", filter: "rank-S+" },
+    { group: "評級", label: "Saketime Top 20", filter: "rank-S" },
+    { group: "評級", label: "Saketime Top 50", filter: "rank-A" },
+    { group: "評級", label: "Saketime Top 100", filter: "rank-B" },
+    { group: "評級", label: "知名銘柄", filter: "rank-C" }
   ],
   "烈酒": [
     { label: "全部", filter: "all" },
@@ -246,7 +263,7 @@ function bindEvents() {
   const addRankContainer = document.getElementById("add-rank-container");
 
   const addCategoryTags = {
-    "清酒": ["吟釀", "大吟釀", "氣泡清酒", "本釀造", "純米酒", "特別純米", "純米吟釀", "純米大吟釀", "生酒", "山廢", "生酛", "貴釀酒", "無特定名稱 / 非公開"],
+    "清酒": ["純米大吟釀", "純米吟釀", "特別純米", "純米酒", "大吟釀", "吟釀", "本釀造", "無特定名稱 / 非公開", "山廢", "生酛", "生酒", "生詰", "氣泡清酒", "貴釀酒"],
     "葡萄酒": ["紅酒", "白酒", "香檳", "氣泡酒"],
     "威士忌": ["單一麥芽威士忌", "調和威士忌"],
     "琴酒": ["琴酒"],
