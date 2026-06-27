@@ -88,7 +88,6 @@ const categoryFilters = {
     { label: "梅酒", filter: "tag-梅酒" }
   ],
   "清酒": [
-    { group: "法定等級", label: "全部", filter: "all" },
     { group: "法定等級", label: "純米大吟釀", filter: "tag-純米大吟釀" },
     { group: "法定等級", label: "純米吟釀", filter: "tag-純米吟釀" },
     { group: "法定等級", label: "特別純米", filter: "tag-特別純米" },
@@ -106,6 +105,7 @@ const categoryFilters = {
     { group: "特殊工藝與狀態", label: "氣泡清酒", filter: "tag-氣泡清酒" },
     { group: "特殊工藝與狀態", label: "貴釀酒", filter: "tag-貴釀酒" },
 
+    { group: "評級", label: "全部", filter: "all" },
     { group: "評級", label: "Saketime Top 10", filter: "rank-S+" },
     { group: "評級", label: "Saketime Top 20", filter: "rank-S" },
     { group: "評級", label: "Saketime Top 50", filter: "rank-A" },
