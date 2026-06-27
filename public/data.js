@@ -2,7 +2,7 @@ const wineData = [
   {
     "id": 1,
     "category": "威士忌",
-    "tag": "單一麥芽威士忌",
+    "tag": "單一麥芽威士忌、蘇格蘭高地、雪莉桶、波本桶",
     "name": "大摩 13年",
     "image": "./images/IMG_4710.jpg",
     "price": 3420,
@@ -13,7 +13,7 @@ const wineData = [
   {
     "id": 2,
     "category": "威士忌",
-    "tag": "調和威士忌",
+    "tag": "調和威士忌、日本、泥煤味、水楢桶",
     "name": "厚岸 夏至 單一調和 日本威士忌",
     "image": "",
     "price": 29700,
@@ -24,7 +24,7 @@ const wineData = [
   {
     "id": 3,
     "category": "威士忌",
-    "tag": "單一麥芽威士忌",
+    "tag": "單一麥芽威士忌、蘇格蘭高地、波本桶、雪莉桶",
     "name": "格蘭傑 稀印",
     "image": "",
     "price": 4350,
@@ -35,7 +35,7 @@ const wineData = [
   {
     "id": 4,
     "category": "威士忌",
-    "tag": "單一麥芽威士忌",
+    "tag": "單一麥芽威士忌、日本、雪莉桶、波本桶",
     "name": "琉歌 2025 Single Malt Japanese Whisky",
     "image": "",
     "price": 16500,
@@ -46,7 +46,7 @@ const wineData = [
   {
     "id": 5,
     "category": "威士忌",
-    "tag": "單一麥芽威士忌",
+    "tag": "單一麥芽威士忌、蘇格蘭島嶼區、波特桶、輕泥煤",
     "name": "高原騎士 15年 火神",
     "image": "",
     "price": 8600,
@@ -57,7 +57,7 @@ const wineData = [
   {
     "id": 6,
     "category": "威士忌",
-    "tag": "單一麥芽威士忌",
+    "tag": "單一麥芽威士忌、蘇格蘭島嶼區、波本桶、輕泥煤",
     "name": "高原騎士 17年 冰神",
     "image": "",
     "price": 8600,
@@ -68,7 +68,7 @@ const wineData = [
   {
     "id": 7,
     "category": "威士忌",
-    "tag": "單一麥芽威士忌",
+    "tag": "單一麥芽威士忌、蘇格蘭艾雷島、紅酒桶、泥煤味",
     "name": "波摩 14年 波爾多桶 單一麥芽威士忌",
     "image": "",
     "price": 1710,
@@ -79,7 +79,7 @@ const wineData = [
   {
     "id": 8,
     "category": "威士忌",
-    "tag": "調和威士忌",
+    "tag": "調和威士忌、蘇格蘭斯貝賽、雪莉桶、波本桶",
     "name": "皇家禮炮 21年 新奢時尚系列第三代 燦金羽冠",
     "image": "",
     "price": 3000,
@@ -90,7 +90,7 @@ const wineData = [
   {
     "id": 9,
     "category": "威士忌",
-    "tag": "單一麥芽威士忌",
+    "tag": "單一麥芽威士忌、台灣、雪莉桶",
     "name": "噶瑪蘭 層豐雪莉三桶 單一純麥威士忌",
     "image": "",
     "price": 2070,

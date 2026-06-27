@@ -54,14 +54,28 @@ function formatPriceHtml(w) {
   }
 }
 
-// extract categories
-const categories = ["All", ...new Set(wineData.map(w => w.category))];
+// extract categories and enforce custom order
+const customOrder = ["All", "清酒", "威士忌", "葡萄酒", "烈酒", "果實酒"];
+const categories = [...new Set([...customOrder, ...wineData.map(w => w.category)])];
 
 const categoryFilters = {
   "威士忌": [
     { label: "全部", filter: "all" },
-    { label: "單一麥芽威士忌", filter: "tag-單一麥芽威士忌" },
-    { label: "調和威士忌", filter: "tag-調和威士忌" }
+    { label: "單一麥芽", filter: "tag-單一麥芽威士忌" },
+    { label: "調和", filter: "tag-調和威士忌" },
+    { label: "蘇格蘭高地", filter: "tag-蘇格蘭高地" },
+    { label: "蘇格蘭斯貝賽", filter: "tag-蘇格蘭斯貝賽" },
+    { label: "蘇格蘭島嶼", filter: "tag-蘇格蘭島嶼區" },
+    { label: "蘇格蘭艾雷島", filter: "tag-蘇格蘭艾雷島" },
+    { label: "日本", filter: "tag-日本" },
+    { label: "台灣", filter: "tag-台灣" },
+    { label: "雪莉桶", filter: "tag-雪莉桶" },
+    { label: "波本桶", filter: "tag-波本桶" },
+    { label: "波特桶", filter: "tag-波特桶" },
+    { label: "紅酒桶", filter: "tag-紅酒桶" },
+    { label: "水楢桶", filter: "tag-水楢桶" },
+    { label: "泥煤味", filter: "tag-泥煤味" },
+    { label: "輕泥煤", filter: "tag-輕泥煤" }
   ],
   "果實酒": [
     { label: "全部", filter: "all" },
@@ -412,18 +426,41 @@ function updateStats(list) {
   statTotal.textContent = list.length;
   
   const validList = list.filter(w => w.price > 0);
-  if(validList.length > 0) {
-    if (currentCat === "清酒") {
-      const jpyPrices = validList.map(w => w.currency === 'JPY' ? w.price : w.price / JPY_TO_TWD);
-      const sum = jpyPrices.reduce((a, b) => a + b, 0);
-      statAvg.textContent = `¥${Math.round(sum / validList.length).toLocaleString()}`;
+  const avgEl = document.getElementById("stat-avg");
+  const sumEl = document.getElementById("stat-sum");
+  
+  let totalJpy = 0;
+  let validJpyCount = 0;
+  let totalTwd = 0;
+  
+  validList.forEach(w => {
+    if (w.currency === 'JPY') {
+      totalJpy += w.price;
+      validJpyCount++;
     } else {
-      const twdPrices = validList.map(w => getTwdPrice(w));
-      const sum = twdPrices.reduce((a, b) => a + b, 0);
-      statAvg.textContent = `NT$${Math.round(sum / validList.length).toLocaleString()}`;
+      totalTwd += w.price;
+    }
+  });
+
+  if (currentCat === "清酒") {
+    // For sake, prioritize JPY
+    sumEl.innerHTML = `¥${Math.round(totalJpy).toLocaleString()}`;
+    if (validJpyCount > 0) {
+      avgEl.innerHTML = `¥${Math.round(totalJpy / validJpyCount).toLocaleString()}`;
+    } else {
+      avgEl.innerHTML = "0";
     }
   } else {
-    statAvg.textContent = "-";
+    // For others, prioritize TWD
+    let grandTotalTwd = totalTwd + (totalJpy * 0.21);
+    let count = validList.length;
+    
+    sumEl.innerHTML = `NT$${Math.round(grandTotalTwd).toLocaleString()}`;
+    if (count > 0) {
+      avgEl.innerHTML = `NT$${Math.round(grandTotalTwd / count).toLocaleString()}`;
+    } else {
+      avgEl.innerHTML = "0";
+    }
   }
   
   statWhisky.textContent = list.filter(w => w.category.includes('威士忌')).length;
