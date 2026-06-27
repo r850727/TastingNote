@@ -178,20 +178,14 @@ h2 {
   min-width: 32px;
 }
 .badge.sp { 
-  background: linear-gradient(180deg, #7b2cbf, #9d4edd, #ffaa00, #ffd000, #7b2cbf);
-  background-size: 100% 300%;
+  background: linear-gradient(180deg, #9d4edd 0%, #ffaa00 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: purple-gold 4s ease infinite;
   filter: brightness(1.2);
   border: 1px solid rgba(255, 208, 0, 0.4);
 }
 
-@keyframes purple-gold {
-  0%, 100% { background-position: 50% 0%; }
-  50% { background-position: 50% 100%; }
-}
 .badge.s { background: var(--green-bg); color: var(--green); }
 .badge.a { background: var(--blue-bg); color: var(--blue); }
 .badge.b { background: var(--yellow-bg); color: var(--yellow); }
@@ -308,9 +302,7 @@ h2 {
   transition: background 0.2s;
 }
 .wine-card.rank-S\+::before { 
-  background: linear-gradient(180deg, #7b2cbf, #9d4edd, #ffaa00, #ffd000, #7b2cbf);
-  background-size: 100% 300%;
-  animation: purple-gold 4s ease infinite;
+  background: linear-gradient(180deg, #9d4edd 0%, #ffaa00 100%);
   filter: brightness(1.2);
 }
 .wine-card.rank-S::before { background: var(--green); }
