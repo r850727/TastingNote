@@ -97,16 +97,17 @@ const categoryFilters = {
   ],
   "烈酒": [
     { label: "全部", filter: "all" },
+    { label: "琴酒", filter: "tag-琴酒" },
+    { label: "龍舌蘭", filter: "tag-龍舌蘭" },
     { label: "蘭姆酒", filter: "tag-蘭姆酒" },
-    { label: "高粱", filter: "tag-高粱" },
-    { label: "琴酒", filter: "tag-琴酒" }
+    { label: "高粱", filter: "tag-高粱" }
   ],
   "葡萄酒": [
     { label: "全部", filter: "all" },
-    { label: "氣泡酒", filter: "tag-氣泡酒" },
-    { label: "白酒", filter: "tag-白酒" },
     { label: "紅酒", filter: "tag-紅酒" },
-    { label: "香檳", filter: "tag-香檳" }
+    { label: "白酒", filter: "tag-白酒" },
+    { label: "香檳", filter: "tag-香檳" },
+    { label: "氣泡酒", filter: "tag-氣泡酒" }
   ],
   "All": []
 };
@@ -157,7 +158,9 @@ const defaultSorts = [
 ];
 
 const sakeSorts = [
-  ...defaultSorts,
+  { label: "名字排序", sort: "default" },
+  { label: "價格高→低", sort: "price-desc" },
+  { label: "價格低→高", sort: "price-asc" },
   { label: "評級高→低", sort: "rank-desc" },
   { label: "評級低→高", sort: "rank-asc" }
 ];
@@ -244,11 +247,11 @@ function bindEvents() {
 
   const addCategoryTags = {
     "清酒": ["吟釀", "大吟釀", "氣泡清酒", "本釀造", "純米酒", "特別純米", "純米吟釀", "純米大吟釀", "生酒", "山廢", "生酛", "貴釀酒", "無特定名稱 / 非公開"],
-    "葡萄酒": ["氣泡酒", "白酒", "紅酒", "香檳"],
+    "葡萄酒": ["紅酒", "白酒", "香檳", "氣泡酒"],
     "威士忌": ["單一麥芽威士忌", "調和威士忌"],
     "琴酒": ["琴酒"],
     "果實酒": ["柚子酒", "梅酒"],
-    "烈酒": ["蘭姆酒", "高粱", "琴酒"],
+    "烈酒": ["琴酒", "龍舌蘭", "蘭姆酒", "高粱"],
     "其他": ["其他"]
   };
 
@@ -355,7 +358,11 @@ function getFilteredData() {
   } else if(currentSort === "rank-asc") {
     list.sort((a, b) => rankWeight[a.saketime_rank] - rankWeight[b.saketime_rank]);
   } else {
-    list.sort((a, b) => a.id - b.id); // default
+    if (currentCat === "清酒") {
+      list.sort((a, b) => a.name > b.name ? 1 : -1);
+    } else {
+      list.sort((a, b) => a.id - b.id); // default
+    }
   }
   
   return list;

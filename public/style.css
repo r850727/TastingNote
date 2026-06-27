@@ -130,18 +130,18 @@ h2 {
 .stat .val {
   font-size: 20px;
   font-weight: 800;
+  color: #ffffff;
 }
+
+#stat-sum { color: var(--blue); }
+#stat-avg { color: var(--green); }
+#stat-total { color: var(--yellow); }
 
 .stat .lbl {
   font-size: 11px;
   color: var(--t2);
   margin-top: 4px;
 }
-
-.stat.sp .val { color: var(--green); }
-.stat.a .val { color: var(--blue); }
-.stat.b .val { color: var(--yellow); }
-.stat.c .val { color: var(--red); }
 
 /* Legend */
 .legend {
