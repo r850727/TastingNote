@@ -128,9 +128,10 @@ h2 {
 }
 
 .stat .val {
-  font-size: 20px;
+  font-size: clamp(14px, 4.5vw, 20px);
   font-weight: 800;
   color: #ffffff;
+  word-break: break-all;
 }
 
 #stat-sum { color: var(--blue); }
