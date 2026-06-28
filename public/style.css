@@ -339,13 +339,28 @@ h2 {
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
+  width: 100%;
 }
 
 .wc-tags {
   display: flex;
   align-items: center;
   gap: 8px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.wc-tags::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 48px;
+  background: linear-gradient(to right, transparent, var(--card));
+  pointer-events: none;
 }
 
 .wc-price {
