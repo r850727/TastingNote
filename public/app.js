@@ -352,11 +352,12 @@ function bindEvents() {
     } else if (cat === "威士忌") {
       const type = document.getElementById("add-whisky-type").value;
       const region = document.getElementById("add-whisky-region").value;
-      const cask = document.getElementById("add-whisky-cask").value;
+      const caskSelect = document.getElementById("add-whisky-cask");
+      const casks = Array.from(caskSelect.selectedOptions).map(o => o.value);
       const peat = document.getElementById("add-whisky-peat").value;
       
       const tags = [type, region];
-      if (cask) tags.push(cask);
+      if (casks.length > 0) tags.push(...casks);
       if (peat) tags.push(peat);
       tag = tags.join("、");
     } else {
