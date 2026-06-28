@@ -292,7 +292,7 @@ function bindEvents() {
     "清酒": ["純米大吟釀", "純米吟釀", "特別純米", "純米酒", "大吟釀", "吟釀", "本釀造", "無特定名稱 / 非公開", "山廢", "生酛", "生酒", "生詰", "氣泡清酒", "貴釀酒"],
     "葡萄酒": ["紅酒", "白酒", "香檳", "氣泡酒"],
     "威士忌": ["單一麥芽威士忌", "調和威士忌"],
-    "果實酒": ["柚子酒", "梅酒"],
+    "果實酒": ["梅酒", "柚子酒"],
     "烈酒": ["琴酒", "龍舌蘭", "蘭姆酒", "高粱"],
     "其他": ["其他"]
   };
@@ -465,6 +465,17 @@ function getRankClass(rank) {
   return rank.toLowerCase().replace('+', 'p'); // handling S+ as sp in css
 }
 
+function getCatClass(cat) {
+  const map = {
+    "清酒": "sake",
+    "威士忌": "whisky",
+    "葡萄酒": "wine",
+    "烈酒": "spirits",
+    "果實酒": "fruit"
+  };
+  return map[cat] || "other";
+}
+
 function renderList(list) {
   countLabel.textContent = `顯示 ${list.length} 筆酒款`;
   
@@ -476,8 +487,9 @@ function renderList(list) {
   wineList.innerHTML = list.map(w => {
     const rankCls = getRankClass(w.saketime_rank);
     const inCart = cart.has(w.id);
+    const borderClass = currentCat === "All" ? `cat-${getCatClass(w.category)}` : `rank-${w.saketime_rank}`;
     return `
-      <div class="wine-card rank-${w.saketime_rank}" data-id="${w.id}">
+      <div class="wine-card ${borderClass}" data-id="${w.id}">
         ${!w.image ? '<div class="notification-dot" title="無圖片"></div>' : ''}
         <div class="wc-info">
           <div class="wc-name" title="${w.name}">${w.name}</div>
