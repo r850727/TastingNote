@@ -309,6 +309,13 @@ function bindEvents() {
 
   addCat.addEventListener('change', updateAddModal);
 
+  // Whisky cask buttons toggle
+  document.querySelectorAll('.cask-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+    });
+  });
+
   let selectedCurrency = "JPY";
   const btnJpy = document.getElementById("btn-currency-jpy");
   const btnTwd = document.getElementById("btn-currency-twd");
@@ -352,8 +359,7 @@ function bindEvents() {
     } else if (cat === "威士忌") {
       const type = document.getElementById("add-whisky-type").value;
       const region = document.getElementById("add-whisky-region").value;
-      const caskSelect = document.getElementById("add-whisky-cask");
-      const casks = Array.from(caskSelect.selectedOptions).map(o => o.value);
+      const casks = Array.from(document.querySelectorAll('.cask-btn.active')).map(b => b.dataset.cask);
       const peat = document.getElementById("add-whisky-peat").value;
       
       const tags = [type, region];

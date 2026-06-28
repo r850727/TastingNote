@@ -155,14 +155,13 @@
             </select>
           </label>
           <label style="margin-top: 8px;">桶型 (可多選):
-            <select id="add-whisky-cask" multiple style="height: auto; min-height: 100px; padding: 4px;">
-              <option value="雪莉桶">雪莉桶</option>
-              <option value="波本桶">波本桶</option>
-              <option value="波特桶">波特桶</option>
-              <option value="紅酒桶">紅酒桶</option>
-              <option value="水楢桶">水楢桶</option>
-            </select>
-            <div style="font-size: 11px; color: var(--t2); margin-top: 4px;">按住 Ctrl/Cmd (電腦) 或直接點擊 (手機) 進行多選</div>
+            <div id="add-whisky-cask-buttons" style="display: flex; gap: 5px; flex-wrap: wrap; margin-top: 5px;">
+              <button type="button" class="fbtn cask-btn" data-cask="雪莉桶">雪莉桶</button>
+              <button type="button" class="fbtn cask-btn" data-cask="波本桶">波本桶</button>
+              <button type="button" class="fbtn cask-btn" data-cask="波特桶">波特桶</button>
+              <button type="button" class="fbtn cask-btn" data-cask="紅酒桶">紅酒桶</button>
+              <button type="button" class="fbtn cask-btn" data-cask="水楢桶">水楢桶</button>
+            </div>
           </label>
           <label style="margin-top: 8px;">泥煤強度 (可選):
             <select id="add-whisky-peat">
