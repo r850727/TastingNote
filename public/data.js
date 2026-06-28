@@ -70,7 +70,7 @@ const wineData = [
     "category": "威士忌",
     "tag": "單一麥芽威士忌、蘇格蘭艾雷島、紅酒桶、泥煤味",
     "name": "波摩 14年 波爾多桶 單一麥芽威士忌",
-    "image": "",
+    "image": "./images/IMG_4172.JPG",
     "price": 1710,
     "currency": "TWD",
     "saketime_rank": "-",
@@ -81,7 +81,7 @@ const wineData = [
     "category": "威士忌",
     "tag": "調和威士忌、蘇格蘭斯貝賽、雪莉桶、波本桶、無泥煤",
     "name": "皇家禮炮 21年 新奢時尚系列第三代 燦金羽冠",
-    "image": "",
+    "image": "./images/IMG_4174.JPG",
     "price": 3000,
     "currency": "TWD",
     "saketime_rank": "-",
@@ -113,7 +113,7 @@ const wineData = [
     "id": 11,
     "category": "果實酒",
     "tag": "梅酒",
-    "name": "日造酒妝 炭燒梅酒\胭脂梅酒",
+    "name": "日造酒妝 炭燒梅酒\\胭脂梅酒",
     "image": "./images/IMG_2344.jpg",
     "price": 250,
     "currency": "TWD",
@@ -134,7 +134,7 @@ const wineData = [
   {
     "id": 13,
     "category": "清酒",
-    "tag": "氣泡清酒、Top50",
+    "tag": "氣泡清酒",
     "name": "あべ SIRIUS 2024",
     "image": "./images/IMG_3298.JPG",
     "price": 3050,
@@ -145,7 +145,7 @@ const wineData = [
   {
     "id": 14,
     "category": "清酒",
-    "tag": "純米大吟釀、Top50",
+    "tag": "純米大吟釀",
     "name": "あべ ゴールド 黒ラベル",
     "image": "./images/IMG_3300.JPG",
     "price": 5000,
@@ -156,7 +156,7 @@ const wineData = [
   {
     "id": 15,
     "category": "清酒",
-    "tag": "吟釀、Top50",
+    "tag": "吟釀",
     "name": "あべ+",
     "image": "./images/IMG_6270.jpg",
     "price": 2970,
@@ -167,7 +167,7 @@ const wineData = [
   {
     "id": 16,
     "category": "清酒",
-    "tag": "純米大吟釀、Top20",
+    "tag": "純米大吟釀",
     "name": "みむろ杉 純米大吟釀 高橋活日命に捧ぐ",
     "image": "./images/IMG_8331.jpg",
     "price": 5940,
@@ -178,7 +178,7 @@ const wineData = [
   {
     "id": 17,
     "category": "清酒",
-    "tag": "純米吟釀、生酒、Top50",
+    "tag": "純米吟釀、生酒",
     "name": "よこやま 純米吟醸 SILVER7 生",
     "image": "./images/IMG_5668.jpg",
     "price": 1870,
@@ -189,7 +189,7 @@ const wineData = [
   {
     "id": 18,
     "category": "清酒",
-    "tag": "純米吟釀、生酒、Top20",
+    "tag": "純米吟釀、生酒",
     "name": "亀の海 春うらら 純米吟釀 槽口生",
     "image": "./images/IMG_2942.JPG",
     "price": 1980,
@@ -200,7 +200,7 @@ const wineData = [
   {
     "id": 19,
     "category": "清酒",
-    "tag": "純米大吟釀、Top20",
+    "tag": "純米大吟釀",
     "name": "亀の海 純米大吟醸",
     "image": "./images/IMG_1922.jpg",
     "price": 2145,
@@ -211,7 +211,7 @@ const wineData = [
   {
     "id": 20,
     "category": "清酒",
-    "tag": "純米大吟釀、Top100",
+    "tag": "純米大吟釀",
     "name": "作 竒瑞 純米大吟醸",
     "image": "./images/IMG_1863.jpg",
     "price": 10000,
@@ -222,7 +222,7 @@ const wineData = [
   {
     "id": 21,
     "category": "清酒",
-    "tag": "純米吟釀、Top100",
+    "tag": "純米吟釀",
     "name": "作 純米吟釀 雄町",
     "image": "./images/IMG_0624.jpg",
     "price": 2750,
@@ -234,7 +234,7 @@ const wineData = [
     "id": 22,
     "category": "清酒",
     "tag": "純米大吟釀",
-    "name": "光榮菊 盞月 東条山田錦",
+    "name": "光栄菊 盞月 東条山田錦",
     "image": "./images/IMG_3132.JPG",
     "price": 4500,
     "currency": "JPY",
@@ -244,7 +244,7 @@ const wineData = [
   {
     "id": 23,
     "category": "清酒",
-    "tag": "純米大吟釀、Top20",
+    "tag": "純米大吟釀",
     "name": "冩樂 純米大吟醸 極上二割",
     "image": "./images/IMG_9973.jpg",
     "price": 22000,
@@ -255,7 +255,7 @@ const wineData = [
   {
     "id": 24,
     "category": "清酒",
-    "tag": "純米大吟釀、Top50",
+    "tag": "純米大吟釀",
     "name": "加茂錦 荷札酒 赤磐雄町 純米大吟釀",
     "image": "./images/IMG_2209.jpg",
     "price": 2980,
@@ -266,7 +266,7 @@ const wineData = [
   {
     "id": 25,
     "category": "清酒",
-    "tag": "本釀造、Top50",
+    "tag": "本釀造",
     "name": "勝駒 上撰",
     "image": "./images/IMG_2944.JPG",
     "price": 2320,
@@ -277,7 +277,7 @@ const wineData = [
   {
     "id": 26,
     "category": "清酒",
-    "tag": "純米吟釀、Top50",
+    "tag": "純米吟釀",
     "name": "勝駒 純米吟釀",
     "image": "./images/IMG_2384.jpg",
     "price": 3328,
@@ -288,7 +288,7 @@ const wineData = [
   {
     "id": 27,
     "category": "清酒",
-    "tag": "純米大吟釀、知名銘柄",
+    "tag": "純米大吟釀",
     "name": "十九 純米大吟釀",
     "image": "./images/IMG_2945.JPG",
     "price": 2420,
@@ -299,7 +299,7 @@ const wineData = [
   {
     "id": 28,
     "category": "清酒",
-    "tag": "大吟釀、Top10",
+    "tag": "大吟釀",
     "name": "十四代 中取り大吟釀",
     "image": "./images/IMG_3942.jpg",
     "price": 6000,
@@ -310,7 +310,7 @@ const wineData = [
   {
     "id": 29,
     "category": "清酒",
-    "tag": "純米大吟釀、知名銘柄",
+    "tag": "純米大吟釀",
     "name": "千代鶴 「千」純米大吟釀",
     "image": "./images/IMG_6528.jpg",
     "price": 5170,
@@ -321,7 +321,7 @@ const wineData = [
   {
     "id": 30,
     "category": "清酒",
-    "tag": "氣泡清酒、知名銘柄",
+    "tag": "氣泡清酒",
     "name": "南部美人 AWA SAKE 瓶內二次發酵氣泡清酒",
     "image": "./images/IMG_0026.jpg",
     "price": 5500,
@@ -332,7 +332,18 @@ const wineData = [
   {
     "id": 31,
     "category": "清酒",
-    "tag": "純米大吟釀、Top50",
+    "tag": "純米大吟釀",
+    "name": "吾有事（わがうじ）　純米大吟醸　美糸　-BEAT-",
+    "image": "./images/IMG_4171.JPG",
+    "price": 6600,
+    "currency": "JPY",
+    "saketime_rank": "C",
+    "note": ""
+  },
+  {
+    "id": 32,
+    "category": "清酒",
+    "tag": "純米大吟釀",
     "name": "大信州 以和為貴",
     "image": "./images/IMG_5667.jpg",
     "price": 5680,
@@ -341,9 +352,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 32,
+    "id": 33,
     "category": "清酒",
-    "tag": "純米大吟釀、Top50",
+    "tag": "純米大吟釀",
     "name": "大嶺 3粒 櫻花杯 山田錦 原酒",
     "image": "./images/IMG_6290.jpg",
     "price": 495,
@@ -352,9 +363,20 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 33,
+    "id": 34,
     "category": "清酒",
-    "tag": "特別純米、生酒、Top50",
+    "tag": "純米大吟釀",
+    "name": "大嶺 二粒 純米大吟釀 山田錦",
+    "image": "./images/IMG_4175.JPG",
+    "price": 5500,
+    "currency": "JPY",
+    "saketime_rank": "A",
+    "note": ""
+  },
+  {
+    "id": 35,
+    "category": "清酒",
+    "tag": "特別純米、生酒",
     "name": "天美 特別純米 生原酒",
     "image": "./images/IMG_5294.jpg",
     "price": 2000,
@@ -363,9 +385,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 34,
+    "id": 36,
     "category": "清酒",
-    "tag": "純米大吟釀、Top10",
+    "tag": "純米大吟釀",
     "name": "宮寒梅 純米大吟醸 美山錦45%",
     "image": "./images/IMG_5056.jpg",
     "price": 1931,
@@ -374,9 +396,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 35,
+    "id": 37,
     "category": "清酒",
-    "tag": "純米大吟釀、Top10",
+    "tag": "純米大吟釀",
     "name": "宮寒梅 純米大吟釀 一割九分 吟髓",
     "image": "./images/IMG_6535.jpg",
     "price": 6600,
@@ -385,9 +407,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 36,
+    "id": 38,
     "category": "清酒",
-    "tag": "純米吟釀、生酒、Top20",
+    "tag": "純米吟釀、生酒",
     "name": "寒菊銘釀 OCEAN99 銀海 純米吟釀無濾過生原酒",
     "image": "./images/IMG_1639.jpg",
     "price": 1705,
@@ -396,9 +418,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 37,
+    "id": 39,
     "category": "清酒",
-    "tag": "純米大吟釀、生酒、Top10",
+    "tag": "純米大吟釀、生酒",
     "name": "寒菊銘釀 Pray for 2025 中取り 無濾過生原酒",
     "image": "./images/IMG_3815.JPG",
     "price": 3300,
@@ -407,9 +429,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 38,
+    "id": 40,
     "category": "清酒",
-    "tag": "純米大吟釀、生酒、Top10",
+    "tag": "純米大吟釀、生酒",
     "name": "寒菊銘釀 Silver Lining -Diffused- 総の舞29 おりがらみ 純米大吟醸 無濾過生原酒",
     "image": "./images/IMG_4062.jpg",
     "price": 3025,
@@ -418,9 +440,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 39,
+    "id": 41,
     "category": "清酒",
-    "tag": "純米大吟釀、生酒、Top20",
+    "tag": "純米大吟釀、生酒",
     "name": "寒菊銘釀 総乃寒菊 総の舞50 Adapt 2025 純米大吟醸 うすにごり無濾過生原酒 〜Discovery Series〜",
     "image": "./images/IMG_3736.JPG",
     "price": 2730,
@@ -429,9 +451,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 40,
+    "id": 42,
     "category": "清酒",
-    "tag": "純米大吟釀、生酒、Top10",
+    "tag": "純米大吟釀、生酒",
     "name": "寒菊銘釀 電照菊 純米大吟醸生原酒 山田錦50 おりがらみ",
     "image": "./images/IMG_7724.jpg",
     "price": 5610,
@@ -440,9 +462,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 41,
+    "id": 43,
     "category": "清酒",
-    "tag": "純米大吟釀、氣泡清酒、Top10",
+    "tag": "純米大吟釀、氣泡清酒",
     "name": "寒菊銘釀 電照菊39 -Luminous Emblem- 純米大吟醸 スパークリング",
     "image": "./images/IMG_4098.JPG",
     "price": 3300,
@@ -451,9 +473,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 42,
+    "id": 44,
     "category": "清酒",
-    "tag": "純米吟釀、Top20",
+    "tag": "純米吟釀",
     "name": "小布施ワイナリー ソガ ペール エ フィス サケ エロティック ヌメロシス 2025",
     "image": "./images/IMG_2807.JPG",
     "price": 1600,
@@ -462,9 +484,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 43,
+    "id": 45,
     "category": "清酒",
-    "tag": "純米大吟釀、生詰、Top100",
+    "tag": "純米大吟釀、生詰",
     "name": "尾瀬の雪どけ 純米大吟醸 旬吟 生詰（令和7醸造年度）",
     "image": "./images/IMG_7702.jpg",
     "price": 1969,
@@ -473,9 +495,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 44,
+    "id": 46,
     "category": "清酒",
-    "tag": "純米大吟釀、Top50",
+    "tag": "純米大吟釀",
     "name": "山三 純米大吟醸 山恵錦 四割五分 うすにごり",
     "image": "./images/IMG_3590.jpg",
     "price": 1980,
@@ -484,9 +506,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 45,
+    "id": 47,
     "category": "清酒",
-    "tag": "吟釀、Top20",
+    "tag": "吟釀",
     "name": "川中島 幻舞 吟釀",
     "image": "./images/IMG_6482.jpg",
     "price": 1980,
@@ -495,9 +517,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 46,
+    "id": 48,
     "category": "清酒",
-    "tag": "特別純米、生酒、Top20",
+    "tag": "特別純米、生酒",
     "name": "川中島 幻舞 特別純米 しぼりたて 無濾過生原酒",
     "image": "./images/IMG_3302.JPG",
     "price": 2310,
@@ -506,9 +528,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 47,
+    "id": 49,
     "category": "清酒",
-    "tag": "純米吟釀、生酒、Top20",
+    "tag": "純米吟釀、生酒",
     "name": "川中島 幻舞 純米吟釀 雄町 無濾過生原酒",
     "image": "./images/IMG_3840.JPG",
     "price": 3960,
@@ -517,9 +539,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 48,
+    "id": 50,
     "category": "清酒",
-    "tag": "純米吟釀、生酒、Top50",
+    "tag": "純米吟釀、生酒",
     "name": "彩來 Sara 純米吟醸 直汲み PEARLS OF DEW 生酒",
     "image": "./images/IMG_3813.JPG",
     "price": 2200,
@@ -528,9 +550,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 49,
+    "id": 51,
     "category": "清酒",
-    "tag": "純米大吟釀、Top100",
+    "tag": "純米大吟釀",
     "name": "播州一献 純米大吟醸 北錦 火入",
     "image": "./images/IMG_8829.jpg",
     "price": 1980,
@@ -539,9 +561,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 50,
+    "id": 52,
     "category": "清酒",
-    "tag": "純米吟釀、Top10",
+    "tag": "純米吟釀",
     "name": "新政 No.6 S-type",
     "image": "./images/IMG_1265.jpg",
     "price": 20000,
@@ -550,9 +572,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 51,
+    "id": 53,
     "category": "清酒",
-    "tag": "無特定名稱 / 非公開、知名銘柄",
+    "tag": "無特定名稱 / 非公開",
     "name": "日日 改良信交",
     "image": "./images/IMG_3134.JPG",
     "price": 3520,
@@ -561,9 +583,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 52,
+    "id": 54,
     "category": "清酒",
-    "tag": "無特定名稱 / 非公開、知名銘柄",
+    "tag": "無特定名稱 / 非公開",
     "name": "日日 穂増",
     "image": "./images/IMG_3739.JPG",
     "price": 3410,
@@ -572,9 +594,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 53,
+    "id": 55,
     "category": "清酒",
-    "tag": "純米吟釀、Top50",
+    "tag": "純米吟釀",
     "name": "會津宮泉 純米吟醸 渡船2号",
     "image": "./images/IMG_3064.jpg",
     "price": 2484,
@@ -583,9 +605,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 54,
+    "id": 56,
     "category": "清酒",
-    "tag": "純米大吟釀、Top50",
+    "tag": "純米大吟釀",
     "name": "會津宮泉 純米大吟釀 鑑評會出品酒",
     "image": "./images/IMG_3256.jpg",
     "price": 6500,
@@ -594,9 +616,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 55,
+    "id": 57,
     "category": "清酒",
-    "tag": "純米吟釀、Top20",
+    "tag": "純米吟釀",
     "name": "東洋美人 限定純米吟醸 醇道一途 山田錦",
     "image": "./images/IMG_4851.jpg",
     "price": 1980,
@@ -605,9 +627,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 56,
+    "id": 58,
     "category": "清酒",
-    "tag": "純米大吟釀、生酒、Top50",
+    "tag": "純米大吟釀、生酒",
     "name": "橫山五十 BLACK 純米大吟釀 直汲み生",
     "image": "./images/IMG_3542.JPG",
     "price": 1998,
@@ -616,9 +638,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 57,
+    "id": 59,
     "category": "清酒",
-    "tag": "純米大吟釀、知名銘柄",
+    "tag": "純米大吟釀",
     "name": "浜川商店 美丈夫 純米大吟醸",
     "image": "./images/IMG_3838.JPG",
     "price": 11000,
@@ -627,9 +649,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 58,
+    "id": 60,
     "category": "清酒",
-    "tag": "無特定名稱 / 非公開、生酒、Top10",
+    "tag": "無特定名稱 / 非公開、生酒",
     "name": "産土 山田錦 生 二農醸（2024醸造年度）",
     "image": "./images/IMG_3214.jpg",
     "price": 4560,
@@ -638,9 +660,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 59,
+    "id": 61,
     "category": "清酒",
-    "tag": "無特定名稱 / 非公開、生酒、Top10",
+    "tag": "無特定名稱 / 非公開、生酒",
     "name": "産土 山田錦 生 四農醸（2025醸造年度）",
     "image": "./images/IMG_3839.jpg",
     "price": 3300,
@@ -649,9 +671,20 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 60,
+    "id": 62,
     "category": "清酒",
-    "tag": "純米大吟釀、Top50",
+    "tag": "純米吟釀、生酒",
+    "name": "田酒 2026 New Year 干支ボトル（馬年）純米吟釀 生酒",
+    "image": "./images/IMG_4176.JPG",
+    "price": 3080,
+    "currency": "JPY",
+    "saketime_rank": "A",
+    "note": ""
+  },
+  {
+    "id": 63,
+    "category": "清酒",
+    "tag": "純米大吟釀",
     "name": "田酒 純米大吟釀 山田錦",
     "image": "./images/IMG_3425.jpg",
     "price": 5500,
@@ -660,9 +693,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 61,
+    "id": 64,
     "category": "清酒",
-    "tag": "純米大吟釀、知名銘柄",
+    "tag": "純米大吟釀",
     "name": "男山 純米大吟釀",
     "image": "./images/IMG_0717.jpg",
     "price": 6600,
@@ -671,9 +704,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 62,
+    "id": 65,
     "category": "清酒",
-    "tag": "大吟釀、Top100",
+    "tag": "大吟釀",
     "name": "磯自慢 一滴入魂 東条山田錦 大吟釀",
     "image": "./images/IMG_1923.jpg",
     "price": 4664,
@@ -682,9 +715,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 63,
+    "id": 66,
     "category": "清酒",
-    "tag": "純米大吟釀、生酒、Top100",
+    "tag": "純米大吟釀、生酒",
     "name": "秀鳳 純米大吟釀 山田穗22生原酒",
     "image": "./images/IMG_3926.jpg",
     "price": 4235,
@@ -693,9 +726,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 64,
+    "id": 67,
     "category": "清酒",
-    "tag": "純米大吟釀、Top100",
+    "tag": "純米大吟釀",
     "name": "紀土 純米大吟醸 山田四十",
     "image": "./images/IMG_4093.jpg",
     "price": 2530,
@@ -704,9 +737,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 65,
+    "id": 68,
     "category": "清酒",
-    "tag": "純米大吟釀、Top10",
+    "tag": "純米大吟釀",
     "name": "而今 特等 雄町 2025 純米大吟釀",
     "image": "./images/IMG_3246.jpg",
     "price": 33000,
@@ -715,9 +748,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 66,
+    "id": 69,
     "category": "清酒",
-    "tag": "純米大吟釀、Top10",
+    "tag": "純米大吟釀",
     "name": "而今 白鶴錦 純米大吟釀 火入",
     "image": "./images/IMG_6820.jpg",
     "price": 19000,
@@ -726,9 +759,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 67,
+    "id": 70,
     "category": "清酒",
-    "tag": "純米大吟釀、生酒、Top10",
+    "tag": "純米大吟釀、生酒",
     "name": "花陽浴 THE PREMIUM 備前雄町 純米大吟釀 磨き四割 無濾過生原酒",
     "image": "./images/IMG_4100.JPG",
     "price": 6000,
@@ -737,20 +770,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 68,
+    "id": 71,
     "category": "清酒",
-    "tag": "純米大吟釀、生酒、Top10",
-    "name": "花陽浴 純米大吟釀 山田錦 瓶圍無濾過原酒 純米大吟釀",
-    "image": "./images/IMG_5789.jpg",
-    "price": 15000,
-    "currency": "JPY",
-    "saketime_rank": "S+",
-    "note": ""
-  },
-  {
-    "id": 69,
-    "category": "清酒",
-    "tag": "純米大吟釀、生酒、Top10",
+    "tag": "純米大吟釀、生酒",
     "name": "花陽浴 The PREMIUM 直汲み 純米大吟釀 山田錦40 生原酒",
     "image": "./images/IMG_2208.jpg",
     "price": 15000,
@@ -759,9 +781,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 70,
+    "id": 72,
     "category": "清酒",
-    "tag": "純米大吟釀、生酒、Top10",
+    "tag": "純米大吟釀、生酒",
     "name": "花陽浴 おりがらみ 純米大吟釀",
     "image": "./images/IMG_3737.JPG",
     "price": 15000,
@@ -770,9 +792,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 71,
+    "id": 73,
     "category": "清酒",
-    "tag": "純米大吟釀、生酒、Top10",
+    "tag": "純米大吟釀、生酒",
     "name": "花陽浴 純米大吟釀 おりがらみ（薄濁）無濾過生原酒",
     "image": "./images/IMG_2159.jpg",
     "price": 2500,
@@ -781,9 +803,20 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 72,
+    "id": 74,
     "category": "清酒",
-    "tag": "純米吟釀、知名銘柄",
+    "tag": "純米大吟釀、生酒",
+    "name": "花陽浴 純米大吟釀 山田錦 瓶圍無濾過原酒 純米大吟釀",
+    "image": "./images/IMG_5789.jpg",
+    "price": 15000,
+    "currency": "JPY",
+    "saketime_rank": "S+",
+    "note": ""
+  },
+  {
+    "id": 75,
+    "category": "清酒",
+    "tag": "純米吟釀",
     "name": "越後 鶴龜 葡萄酒酵母清酒",
     "image": "./images/IMG_2173.jpg",
     "price": 1760,
@@ -792,9 +825,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 73,
+    "id": 76,
     "category": "清酒",
-    "tag": "純米大吟釀、山廢、知名銘柄",
+    "tag": "純米大吟釀、山廢",
     "name": "農口尚彥研究所 山廢 純米大吟釀 山田錦 2020 Vintage",
     "image": "./images/IMG_2211.jpg",
     "price": 16500,
@@ -803,9 +836,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 74,
+    "id": 77,
     "category": "清酒",
-    "tag": "純米大吟釀、Top100",
+    "tag": "純米大吟釀",
     "name": "釀し人九平次 別誂 純米大吟釀",
     "image": "./images/IMG_2622.jpg",
     "price": 5500,
@@ -814,9 +847,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 75,
+    "id": 78,
     "category": "清酒",
-    "tag": "純米大吟釀、Top100",
+    "tag": "純米大吟釀",
     "name": "釀し人九平次 希望之水 純米大吟釀",
     "image": "./images/IMG_0716.jpg",
     "price": 2365,
@@ -825,9 +858,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 76,
+    "id": 79,
     "category": "清酒",
-    "tag": "純米大吟釀、Top10",
+    "tag": "純米大吟釀",
     "name": "金雀 青山綠水 純米大吟釀",
     "image": "./images/IMG_2810.JPG",
     "price": 13200,
@@ -836,9 +869,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 77,
+    "id": 80,
     "category": "清酒",
-    "tag": "純米大吟釀、Top10",
+    "tag": "純米大吟釀",
     "name": "金雀 飛翔 純米大吟醸",
     "image": "./images/IMG_6336.jpg",
     "price": 6600,
@@ -847,9 +880,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 78,
+    "id": 81,
     "category": "清酒",
-    "tag": "大吟釀、Top50",
+    "tag": "大吟釀",
     "name": "鍋島 斗瓶取り 大吟釀",
     "image": "./images/IMG_1643.jpg",
     "price": 7150,
@@ -858,9 +891,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 79,
+    "id": 82,
     "category": "清酒",
-    "tag": "無特定名稱 / 非公開、Top50",
+    "tag": "無特定名稱 / 非公開",
     "name": "鍋島 黑標",
     "image": "./images/IMG_1928.jpg",
     "price": 27000,
@@ -869,7 +902,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 80,
+    "id": 83,
     "category": "清酒",
     "tag": "氣泡清酒",
     "name": "雨後の月　微紅（びこう）　微発泡　ジャパニーズスパークリング",
@@ -880,9 +913,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 81,
+    "id": 84,
     "category": "清酒",
-    "tag": "純米大吟釀、Top50",
+    "tag": "純米大吟釀",
     "name": "飛露喜 純米大吟醸",
     "image": "./images/IMG_7628.jpg",
     "price": 3300,
@@ -891,9 +924,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 82,
+    "id": 85,
     "category": "清酒",
-    "tag": "純米大吟釀、知名銘柄",
+    "tag": "純米大吟釀",
     "name": "高砂 純米大吟醸",
     "image": "./images/IMG_7049.jpg",
     "price": 3520,
@@ -902,9 +935,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 83,
+    "id": 86,
     "category": "清酒",
-    "tag": "純米大吟釀、Top100",
+    "tag": "純米大吟釀",
     "name": "鳳凰美田 純米大吟釀 赤判 火入",
     "image": "./images/IMG_8462.jpg",
     "price": 3300,
@@ -913,9 +946,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 84,
+    "id": 87,
     "category": "清酒",
-    "tag": "純米大吟釀、Top100",
+    "tag": "純米大吟釀",
     "name": "黒龍 ESHIKOTO 五百万石 純米大吟醸",
     "image": "./images/IMG_6836.jpg",
     "price": 3850,
@@ -924,9 +957,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 85,
+    "id": 88,
     "category": "清酒",
-    "tag": "純米大吟釀、Top100",
+    "tag": "純米大吟釀",
     "name": "黒龍 ESHIKOTO 水仙",
     "image": "./images/IMG_2469.JPG",
     "price": 11000,
@@ -935,9 +968,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 86,
+    "id": 89,
     "category": "清酒",
-    "tag": "純米大吟釀、Top100",
+    "tag": "純米大吟釀",
     "name": "黒龍 あどそ さかほまれ 2025",
     "image": "./images/IMG_6512.jpg",
     "price": 5940,
@@ -946,9 +979,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 87,
+    "id": 90,
     "category": "清酒",
-    "tag": "無特定名稱 / 非公開、Top100",
+    "tag": "無特定名稱 / 非公開",
     "name": "黒龍 刻の奏 assemblage",
     "image": "./images/IMG_3274.JPG",
     "price": 13200,
@@ -957,9 +990,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 88,
+    "id": 91,
     "category": "清酒",
-    "tag": "純米吟釀、生酒、Top100",
+    "tag": "純米吟釀、生酒",
     "name": "黒龍 垂れ口 純米吟釀",
     "image": "./images/IMG_9794.jpg",
     "price": 1870,
@@ -968,9 +1001,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 89,
+    "id": 92,
     "category": "清酒",
-    "tag": "大吟釀、Top100",
+    "tag": "大吟釀",
     "name": "黒龍 大吟釀",
     "image": "./images/IMG_0086.jpg",
     "price": 3300,
@@ -979,9 +1012,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 90,
+    "id": 93,
     "category": "清酒",
-    "tag": "純米大吟釀、生酒、Top100",
+    "tag": "純米大吟釀、生酒",
     "name": "黒龍 火いら寿 純米大吟釀",
     "image": "./images/IMG_7223.jpg",
     "price": 7700,
@@ -990,9 +1023,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 91,
+    "id": 94,
     "category": "清酒",
-    "tag": "大吟釀、Top100",
+    "tag": "大吟釀",
     "name": "黒龍 福 ボトル 大吟釀",
     "image": "./images/IMG_0094.jpg",
     "price": 5500,
@@ -1001,9 +1034,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 92,
+    "id": 95,
     "category": "清酒",
-    "tag": "純米大吟釀、Top100",
+    "tag": "純米大吟釀",
     "name": "黒龍 純米大吟醸 吟風 2022",
     "image": "./images/IMG_1575.jpg",
     "price": 6600,
@@ -1012,9 +1045,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 93,
+    "id": 96,
     "category": "清酒",
-    "tag": "純米大吟釀、Top100",
+    "tag": "純米大吟釀",
     "name": "黒龍 純米大吟釀",
     "image": "./images/IMG_1857.jpg",
     "price": 11000,
@@ -1023,9 +1056,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 94,
+    "id": 97,
     "category": "清酒",
-    "tag": "貴釀酒、Top100",
+    "tag": "貴釀酒",
     "name": "黒龍 貴釀酒",
     "image": "./images/IMG_2054.jpg",
     "price": 2420,
@@ -1034,9 +1067,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 95,
+    "id": 98,
     "category": "清酒",
-    "tag": "特別純米、生酛、知名銘柄",
+    "tag": "特別純米、生酛",
     "name": "龍力 特別純米 生酛仕込み",
     "image": "./images/IMG_0697.jpg",
     "price": 1815,
@@ -1045,9 +1078,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 96,
+    "id": 99,
     "category": "清酒",
-    "tag": "貴釀酒、Top50",
+    "tag": "貴釀酒",
     "name": "あべ FOMALHAUT Imperial Sake",
     "image": "",
     "price": 2970,
@@ -1056,9 +1089,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 97,
+    "id": 100,
     "category": "清酒",
-    "tag": "貴釀酒、Top20",
+    "tag": "貴釀酒",
     "name": "亀の海 noble-resonance 至高の余韻 貴醸酒",
     "image": "",
     "price": 13200,
@@ -1067,20 +1100,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 98,
+    "id": 101,
     "category": "清酒",
-    "tag": "純米大吟釀、知名銘柄",
-    "name": "吾有事（わがうじ）　純米大吟醸　美糸　-BEAT-",
-    "image": "",
-    "price": 6600,
-    "currency": "JPY",
-    "saketime_rank": "C",
-    "note": ""
-  },
-  {
-    "id": 99,
-    "category": "清酒",
-    "tag": "純米大吟釀、生酛、知名銘柄",
+    "tag": "純米大吟釀、生酛",
     "name": "大七 箕輪門 生酛 純米大吟醸",
     "image": "",
     "price": 4510,
@@ -1089,20 +1111,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 100,
+    "id": 102,
     "category": "清酒",
-    "tag": "純米大吟釀、Top50",
-    "name": "大嶺 二粒 純米大吟釀 山田錦",
-    "image": "",
-    "price": 5500,
-    "currency": "JPY",
-    "saketime_rank": "A",
-    "note": ""
-  },
-  {
-    "id": 101,
-    "category": "清酒",
-    "tag": "純米大吟釀、Top50",
+    "tag": "純米大吟釀",
     "name": "大嶺 二粒 純米大吟釀 愛山",
     "image": "",
     "price": 8800,
@@ -1111,9 +1122,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 102,
+    "id": 103,
     "category": "清酒",
-    "tag": "純米大吟釀、生酒、Top20",
+    "tag": "純米大吟釀、生酒",
     "name": "寒菊銘釀 総乃寒菊 総の舞50 Identity 2025 純米大吟醸 うすにごり無濾過生原酒 〜Discovery Series〜",
     "image": "",
     "price": 3030,
@@ -1122,9 +1133,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 103,
+    "id": 104,
     "category": "清酒",
-    "tag": "無特定名稱 / 非公開、生酒、Top10",
+    "tag": "無特定名稱 / 非公開、生酒",
     "name": "産土 穂増 六農醸",
     "image": "",
     "price": 7130,
@@ -1133,9 +1144,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 104,
+    "id": 105,
     "category": "清酒",
-    "tag": "無特定名稱 / 非公開、生酒、Top10",
+    "tag": "無特定名稱 / 非公開、生酒",
     "name": "産土 香子 六農醸",
     "image": "",
     "price": 7730,
@@ -1144,9 +1155,9 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 105,
+    "id": 106,
     "category": "清酒",
-    "tag": "純米大吟釀、Top100",
+    "tag": "純米大吟釀",
     "name": "雪の茅舎 純米大吟釀 聽雪",
     "image": "",
     "price": 8360,
@@ -1155,7 +1166,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 106,
+    "id": 107,
     "category": "烈酒",
     "tag": "琴酒",
     "name": "KOMASA GIN ほうじ茶",
@@ -1166,7 +1177,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 107,
+    "id": 108,
     "category": "烈酒",
     "tag": "琴酒",
     "name": "RIVO Foraged Gin",
@@ -1177,7 +1188,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 108,
+    "id": 109,
     "category": "烈酒",
     "tag": "琴酒",
     "name": "Sakari Gin 夙川",
@@ -1188,7 +1199,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 109,
+    "id": 110,
     "category": "烈酒",
     "tag": "琴酒",
     "name": "火之帆 琴酒",
@@ -1199,18 +1210,18 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 110,
+    "id": 111,
     "category": "烈酒",
     "tag": "高粱",
     "name": "白水芳華 蘭亭曲\\金門高粱 58度",
     "image": "./images/IMG_2346.jpg",
-    "price": "1300\\600",
+    "price": 1300,
     "currency": "TWD",
     "saketime_rank": "-",
     "note": ""
   },
   {
-    "id": 111,
+    "id": 112,
     "category": "烈酒",
     "tag": "蘭姆酒",
     "name": "科克蘭 特級蘭姆酒 KIRKLAND SIGNATURE AGED RUM GRAN RESERVA",
@@ -1221,7 +1232,18 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 112,
+    "id": 113,
+    "category": "烈酒",
+    "tag": "龍舌蘭",
+    "name": "墨西哥 818 Reposado 龍舌蘭",
+    "image": "./images/IMG_4163.jpg",
+    "price": 2000,
+    "currency": "TWD",
+    "saketime_rank": "-",
+    "note": ""
+  },
+  {
+    "id": 114,
     "category": "葡萄酒",
     "tag": "香檳",
     "name": "2012 Champagne Louis Brochet HBH Premier Cru",
@@ -1232,7 +1254,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 113,
+    "id": 115,
     "category": "葡萄酒",
     "tag": "香檳",
     "name": "NV (2010) Champagne Inflorescence Blanc de Noirs Lieu-dit \"Côte de Val Vilaine\"",
@@ -1243,7 +1265,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 114,
+    "id": 116,
     "category": "葡萄酒",
     "tag": "氣泡酒",
     "name": "NV Manfredi Asti Spumante DOCG",
@@ -1254,7 +1276,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 115,
+    "id": 117,
     "category": "葡萄酒",
     "tag": "白酒",
     "name": "德國約瑟漢 Riesling Qba 法爾茲 甜白葡萄酒",
@@ -1265,7 +1287,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 116,
+    "id": 118,
     "category": "葡萄酒",
     "tag": "紅酒",
     "name": "2010 Domaine Jacques-Frédéric Mugnier Nuits-Saint-Georges 1er Cru \"Clos de la Maréchale\"",
@@ -1276,7 +1298,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 117,
+    "id": 119,
     "category": "葡萄酒",
     "tag": "白酒",
     "name": "2023 Domaine Dujac Morey-Saint-Denis Blanc",
@@ -1285,17 +1307,5 @@ const wineData = [
     "currency": "JPY",
     "saketime_rank": "-",
     "note": ""
-  },
-  {
-    "id": 118,
-    "category": "烈酒",
-    "tag": "龍舌蘭",
-    "name": "墨西哥 818 Reposado 龍舌蘭",
-    "image": "./images/IMG_4163.jpg",
-    "price": 2000,
-    "currency": "TWD",
-    "saketime_rank": "-",
-    "note": ""
   }
 ];
-

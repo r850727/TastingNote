@@ -187,7 +187,7 @@ function renderFilters() {
 }
 
 const defaultSorts = [
-  { label: "預設排序", sort: "default" },
+  { label: "名字排序", sort: "default" },
   { label: "價格高→低", sort: "price-desc" },
   { label: "價格低→高", sort: "price-asc" }
 ];
@@ -393,11 +393,7 @@ function getFilteredData() {
   } else if(currentSort === "rank-asc") {
     list.sort((a, b) => rankWeight[a.saketime_rank] - rankWeight[b.saketime_rank]);
   } else {
-    if (currentCat === "清酒") {
-      list.sort((a, b) => a.name > b.name ? 1 : -1);
-    } else {
-      list.sort((a, b) => a.id - b.id); // default
-    }
+    list.sort((a, b) => a.name > b.name ? 1 : -1); // default by name
   }
   
   return list;
@@ -431,13 +427,15 @@ function renderList(list) {
     const inCart = cart.has(w.id);
     return `
       <div class="wine-card rank-${w.saketime_rank}" data-id="${w.id}">
-
+        ${!w.image ? '<div class="notification-dot" title="無圖片"></div>' : ''}
         <div class="wc-info">
           <div class="wc-name" title="${w.name}">${w.name}</div>
           <div class="wc-meta">
-            ${w.saketime_rank && w.saketime_rank !== '-' ? `<span class="badge ${rankCls}">${w.saketime_rank}</span>` : ''}
-            ${w.tag ? w.tag.split('、').map(t => `<span class="badge none">${t}</span>`).join('') : ''}
-            <span class="wc-price">${formatPriceHtml(w)}</span>
+            <div class="wc-tags">
+              ${w.saketime_rank && w.saketime_rank !== '-' ? `<span class="badge ${rankCls}">${w.saketime_rank}</span>` : ''}
+              ${w.tag ? w.tag.split('、').map(t => `<span class="badge none">${t}</span>`).join('') : ''}
+            </div>
+            <div class="wc-price">${formatPriceHtml(w)}</div>
           </div>
         </div>
         <button class="wc-fav-btn ${inCart ? 'active' : ''}" data-id="${w.id}">

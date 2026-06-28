@@ -335,6 +335,13 @@ h2 {
 
 .wc-meta {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.wc-tags {
+  display: flex;
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
@@ -369,6 +376,18 @@ h2 {
 .wc-fav-btn.active {
   color: var(--red);
   background: var(--red-bg);
+}
+
+.notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--yellow);
+  border-radius: 50%;
+  box-shadow: 0 0 5px var(--yellow);
+  z-index: 10;
 }
 
 /* Modal */
