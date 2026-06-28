@@ -269,6 +269,15 @@ function bindEvents() {
     if(e.target === wineModal) wineModal.classList.remove('open');
   });
 
+  // close modals on ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      wineModal.classList.remove('open');
+      const addModal = document.getElementById("add-modal");
+      if (addModal) addModal.classList.remove('open');
+    }
+  });
+
   // cart toggle
   cartHeader.addEventListener('click', () => {
     cartBody.classList.toggle('open');
