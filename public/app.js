@@ -113,6 +113,7 @@ const categoryFilters = {
     { group: "法定等級", label: "大吟釀", filter: "tag-大吟釀" },
     { group: "法定等級", label: "吟釀", filter: "tag-吟釀" },
     { group: "法定等級", label: "本釀造", filter: "tag-本釀造" },
+    { group: "法定等級", label: "貴釀酒", filter: "tag-貴釀酒" },
     { group: "法定等級", label: "無特定名稱 / 非公開", filter: "tag-無特定名稱 / 非公開" },
 
     { group: "釀造方式", label: "山廢", filter: "tag-山廢" },
@@ -121,7 +122,6 @@ const categoryFilters = {
     { group: "特殊工藝與狀態", label: "生酒", filter: "tag-生酒" },
     { group: "特殊工藝與狀態", label: "生詰", filter: "tag-生詰" },
     { group: "特殊工藝與狀態", label: "氣泡清酒", filter: "tag-氣泡清酒" },
-    { group: "特殊工藝與狀態", label: "貴釀酒", filter: "tag-貴釀酒" },
 
     { group: "評級", label: "全部", filter: "all" },
     { group: "評級", label: "Saketime Top 10", filter: "rank-S+" },
@@ -278,7 +278,6 @@ function bindEvents() {
   // add wine tool
   const addCat = document.getElementById("add-cat");
   const addTag = document.getElementById("add-tag");
-  const addRankContainer = document.getElementById("add-rank-container");
 
   const addCategoryTags = {
     "清酒": ["純米大吟釀", "純米吟釀", "特別純米", "純米酒", "大吟釀", "吟釀", "本釀造", "無特定名稱 / 非公開", "山廢", "生酛", "生酒", "生詰", "氣泡清酒", "貴釀酒"],
@@ -294,7 +293,14 @@ function bindEvents() {
     const cat = addCat.value;
     const tags = addCategoryTags[cat] || [];
     addTag.innerHTML = tags.map(t => `<option value="${t}">${t}</option>`).join('');
-    addRankContainer.style.display = cat === "清酒" ? "block" : "none";
+    
+    if (cat === "清酒") {
+      document.getElementById("default-tag-container").style.display = "none";
+      document.getElementById("sake-tag-container").style.display = "block";
+    } else {
+      document.getElementById("default-tag-container").style.display = "block";
+      document.getElementById("sake-tag-container").style.display = "none";
+    }
   }
 
   addCat.addEventListener('change', updateAddModal);
@@ -325,12 +331,28 @@ function bindEvents() {
   document.getElementById("add-generate").addEventListener('click', () => {
     const name = document.getElementById("add-name").value;
     const cat = document.getElementById("add-cat").value;
-    const tag = document.getElementById("add-tag").value;
+    
+    let tag = "";
+    let rank = "";
+    
+    if (cat === "清酒") {
+      const grade = document.getElementById("add-sake-grade").value;
+      const process = document.getElementById("add-sake-process").value;
+      const brew = document.getElementById("add-sake-brew").value;
+      rank = document.getElementById("add-rank").value;
+      
+      const tags = [grade];
+      if (process) tags.push(process);
+      if (brew) tags.push(brew);
+      tag = tags.join("、");
+    } else {
+      tag = document.getElementById("add-tag").value;
+    }
+
     const priceRaw = document.getElementById("add-price").value.trim() || "0";
     const price = parseInt(priceRaw.replace(/[^\d]/g, '')) || 0;
 
     const img = document.getElementById("add-img").value;
-    const rank = document.getElementById("add-rank").value;
     
     const obj = {
       id: wineData.length + 1,
