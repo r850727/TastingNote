@@ -294,12 +294,16 @@ function bindEvents() {
     const tags = addCategoryTags[cat] || [];
     addTag.innerHTML = tags.map(t => `<option value="${t}">${t}</option>`).join('');
     
+    document.getElementById("default-tag-container").style.display = "none";
+    document.getElementById("sake-tag-container").style.display = "none";
+    document.getElementById("whisky-tag-container").style.display = "none";
+
     if (cat === "清酒") {
-      document.getElementById("default-tag-container").style.display = "none";
       document.getElementById("sake-tag-container").style.display = "block";
+    } else if (cat === "威士忌") {
+      document.getElementById("whisky-tag-container").style.display = "block";
     } else {
       document.getElementById("default-tag-container").style.display = "block";
-      document.getElementById("sake-tag-container").style.display = "none";
     }
   }
 
@@ -344,6 +348,16 @@ function bindEvents() {
       const tags = [grade];
       if (process) tags.push(process);
       if (brew) tags.push(brew);
+      tag = tags.join("、");
+    } else if (cat === "威士忌") {
+      const type = document.getElementById("add-whisky-type").value;
+      const region = document.getElementById("add-whisky-region").value;
+      const cask = document.getElementById("add-whisky-cask").value;
+      const peat = document.getElementById("add-whisky-peat").value;
+      
+      const tags = [type, region];
+      if (cask) tags.push(cask);
+      if (peat) tags.push(peat);
       tag = tags.join("、");
     } else {
       tag = document.getElementById("add-tag").value;

@@ -134,6 +134,45 @@
             </select>
           </label>
         </div>
+        <div id="whisky-tag-container" style="display: none; border: 1px solid var(--border); padding: 10px; border-radius: 8px; margin-top: 5px; margin-bottom: 5px; background: rgba(0,0,0,0.1);">
+          <div style="font-weight: bold; margin-bottom: 5px; color: var(--accent);">威士忌專屬標籤</div>
+          <label>種類 (必選):
+            <select id="add-whisky-type">
+              <option value="單一麥芽威士忌">單一麥芽威士忌</option>
+              <option value="調和威士忌">調和威士忌</option>
+            </select>
+          </label>
+          <label style="margin-top: 8px;">產區 (必選):
+            <select id="add-whisky-region">
+              <option value="蘇格蘭高地">蘇格蘭高地</option>
+              <option value="蘇格蘭低地">蘇格蘭低地</option>
+              <option value="蘇格蘭斯貝賽">蘇格蘭斯貝賽</option>
+              <option value="蘇格蘭坎貝爾鎮">蘇格蘭坎貝爾鎮</option>
+              <option value="蘇格蘭島嶼區">蘇格蘭島嶼區</option>
+              <option value="蘇格蘭艾雷島">蘇格蘭艾雷島</option>
+              <option value="日本">日本</option>
+              <option value="台灣">台灣</option>
+            </select>
+          </label>
+          <label style="margin-top: 8px;">桶型 (可選):
+            <select id="add-whisky-cask">
+              <option value="">(無)</option>
+              <option value="雪莉桶">雪莉桶</option>
+              <option value="波本桶">波本桶</option>
+              <option value="波特桶">波特桶</option>
+              <option value="紅酒桶">紅酒桶</option>
+              <option value="水楢桶">水楢桶</option>
+            </select>
+          </label>
+          <label style="margin-top: 8px;">泥煤強度 (可選):
+            <select id="add-whisky-peat">
+              <option value="">(無)</option>
+              <option value="泥煤味">泥煤味</option>
+              <option value="輕泥煤">輕泥煤</option>
+              <option value="無泥煤">無泥煤</option>
+            </select>
+          </label>
+        </div>
         <label>價格: 
           <div style="display: flex; gap: 5px; margin-top: 5px;">
             <button type="button" class="fbtn active" id="btn-currency-jpy" style="flex: 0 0 auto;">日幣(¥)</button>
