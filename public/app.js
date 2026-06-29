@@ -4,6 +4,7 @@ const categoryTabs = document.getElementById("category-tabs");
 const filters = document.getElementById("filters");
 const sorts = document.getElementById("sorts");
 const countLabel = document.getElementById("count-label");
+const searchInput = document.getElementById("search-input");
 
 // stats
 const statTotal = document.getElementById("stat-total");
@@ -33,6 +34,7 @@ const cartCount = document.getElementById("cart-count");
 let currentCat = "All";
 let currentFilter = "all";
 let currentSort = "default";
+let currentSearch = "";
 let cart = new Set(); // store ids
 
 const JPY_TO_TWD = 0.21; // 匯率設定
@@ -261,6 +263,14 @@ function bindEvents() {
     }
   });
 
+  // search
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      currentSearch = e.target.value.trim().toLowerCase();
+      updateView();
+    });
+  }
+
   // modal close
   modalClose.addEventListener('click', () => {
     wineModal.classList.remove('open');
@@ -420,6 +430,43 @@ function getFilteredData() {
       const tag = currentFilter.split('-')[1];
       list = list.filter(w => w.tag && w.tag.includes(tag));
     }
+  }
+  
+  if (currentSearch) {
+    const aliases = {
+      "龜": "亀",
+      "之": "の",
+      "黑": "黒",
+      "阿": "あ",
+      "部": "べ",
+      "榮": "栄",
+      "舍": "舎",
+      "寫": "冩",
+      "瀨": "瀬",
+      "產": "産"
+    };
+
+    const normalizeStr = (str) => {
+      if (!str) return "";
+      let s = str.toLowerCase();
+      for (const [key, value] of Object.entries(aliases)) {
+        s = s.split(key).join(value);
+      }
+      return s;
+    };
+
+    const normalizedSearch = normalizeStr(currentSearch);
+
+    list = list.filter(w => {
+      const searchTerms = normalizedSearch.split(/\s+/);
+      const normName = normalizeStr(w.name);
+      const normTag = normalizeStr(w.tag);
+      const normCat = normalizeStr(w.category);
+
+      return searchTerms.every(term => {
+        return normName.includes(term) || normTag.includes(term) || normCat.includes(term);
+      });
+    });
   }
   
   list = [...list]; // clone for sorting
