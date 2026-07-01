@@ -1146,6 +1146,28 @@ const wineData = [
   {
     "id": 105,
     "category": "清酒",
+    "tag": "純米大吟釀",
+    "name": "作 純米大吟醸 布都麻 ふつま",
+    "image": "",
+    "price": 13200,
+    "currency": "JPY",
+    "saketime_rank": "B",
+    "note": ""
+  },
+  {
+    "id": 106,
+    "category": "清酒",
+    "tag": "大吟釀",
+    "name": "冩樂 大吟醸 しずく取り",
+    "image": "",
+    "price": 5960,
+    "currency": "JPY",
+    "saketime_rank": "S",
+    "note": ""
+  },
+  {
+    "id": 107,
+    "category": "清酒",
     "tag": "純米大吟釀、生酛",
     "name": "大七 箕輪門 生酛 純米大吟釀",
     "image": "",
@@ -1155,7 +1177,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 106,
+    "id": 108,
     "category": "清酒",
     "tag": "純米大吟釀",
     "name": "大嶺 二粒 純米大吟釀 愛山",
@@ -1166,7 +1188,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 107,
+    "id": 109,
     "category": "清酒",
     "tag": "純米大吟釀、生酒",
     "name": "寒菊銘釀 総乃寒菊 総の舞50 Identity 2025 純米大吟釀 うすにごり無濾過生原酒 〜Discovery Series〜",
@@ -1177,7 +1199,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 108,
+    "id": 110,
     "category": "清酒",
     "tag": "無特定名稱 / 非公開、生酒",
     "name": "産土 穂増 六農醸",
@@ -1188,7 +1210,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 109,
+    "id": 111,
     "category": "清酒",
     "tag": "無特定名稱 / 非公開、生酒",
     "name": "産土 香子 六農醸",
@@ -1199,7 +1221,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 110,
+    "id": 112,
     "category": "清酒",
     "tag": "純米大吟釀",
     "name": "雪の茅舎 純米大吟釀 聽雪",
@@ -1210,7 +1232,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 111,
+    "id": 113,
     "category": "烈酒",
     "tag": "琴酒",
     "name": "KOMASA GIN ほうじ茶",
@@ -1221,7 +1243,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 112,
+    "id": 114,
     "category": "烈酒",
     "tag": "琴酒",
     "name": "RIVO Foraged Gin",
@@ -1232,7 +1254,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 113,
+    "id": 115,
     "category": "烈酒",
     "tag": "琴酒",
     "name": "Sakari Gin 夙川",
@@ -1243,7 +1265,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 114,
+    "id": 116,
     "category": "烈酒",
     "tag": "龍舌蘭",
     "name": "墨西哥 818 Reposado 龍舌蘭",
@@ -1254,7 +1276,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 115,
+    "id": 117,
     "category": "烈酒",
     "tag": "琴酒",
     "name": "火之帆 琴酒",
@@ -1265,7 +1287,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 116,
+    "id": 118,
     "category": "烈酒",
     "tag": "高粱",
     "name": "白水芳華 蘭亭曲\\金門高粱 58度",
@@ -1276,7 +1298,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 117,
+    "id": 119,
     "category": "烈酒",
     "tag": "蘭姆酒",
     "name": "科克蘭 特級蘭姆酒 KIRKLAND SIGNATURE AGED RUM GRAN RESERVA",
@@ -1287,7 +1309,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 118,
+    "id": 120,
     "category": "葡萄酒",
     "tag": "紅酒",
     "name": "2010 Domaine Jacques-Frédéric Mugnier Nuits-Saint-Georges 1er Cru \"Clos de la Maréchale\"",
@@ -1298,7 +1320,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 119,
+    "id": 121,
     "category": "葡萄酒",
     "tag": "香檳",
     "name": "2012 Champagne Louis Brochet HBH Premier Cru",
@@ -1309,7 +1331,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 120,
+    "id": 122,
     "category": "葡萄酒",
     "tag": "白酒",
     "name": "2022 Domaine Dujac Morey-Saint-Denis Blanc",
@@ -1320,7 +1342,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 121,
+    "id": 123,
     "category": "葡萄酒",
     "tag": "香檳",
     "name": "NV (2010) Champagne Inflorescence Blanc de Noirs Lieu-dit \"Côte de Val Vilaine\"",
@@ -1331,7 +1353,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 122,
+    "id": 124,
     "category": "葡萄酒",
     "tag": "氣泡酒",
     "name": "NV Manfredi Asti Spumante DOCG",
@@ -1342,7 +1364,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 123,
+    "id": 125,
     "category": "葡萄酒",
     "tag": "白酒",
     "name": "德國約瑟漢 Riesling Qba 法爾茲 甜白葡萄酒",
