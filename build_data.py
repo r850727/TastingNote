@@ -51,23 +51,31 @@ def parse_markdown():
                 filename = os.path.basename(img_src)
                 filename_jpg = filename.replace('.jpeg', '.jpg')
                 
-                # Check paths
-                paths_to_try = [
-                    img_src, # exact
-                    os.path.join(IMAGE_SEARCH_DIR, filename),
-                    os.path.join(IMAGE_SEARCH_DIR, filename_jpg)
-                ]
-                
+                # Check paths and resolve true case for Linux deployment safety
                 actual_path = None
-                for p in paths_to_try:
-                    if os.path.exists(p):
-                        actual_path = p
-                        break
+                actual_dest_filename = filename
+                
+                if os.path.exists(img_src):
+                    actual_path = img_src
+                else:
+                    # search in IMAGE_SEARCH_DIR case-insensitively but use true case
+                    lower_filename = filename.lower()
+                    lower_filename_jpg = filename_jpg.lower()
+                    
+                    if os.path.exists(IMAGE_SEARCH_DIR):
+                        for f in os.listdir(IMAGE_SEARCH_DIR):
+                            if f.lower() == lower_filename or f.lower() == lower_filename_jpg:
+                                actual_path = os.path.join(IMAGE_SEARCH_DIR, f)
+                                actual_dest_filename = f
+                                break
                         
                 if actual_path:
-                    dest_path = os.path.join(IMAGE_DEST_DIR, filename)
+                    dest_path = os.path.join(IMAGE_DEST_DIR, actual_dest_filename)
+                    # To prevent Windows keeping old casing on overwrite, remove first
+                    if os.path.exists(dest_path):
+                        os.remove(dest_path)
                     shutil.copy2(actual_path, dest_path)
-                    new_img_src = f"./images/{filename}"
+                    new_img_src = f"./images/{actual_dest_filename}"
                 else:
                     print(f"Warning: Image not found for {filename}")
                     new_img_src = f"./images/{filename}" # fallback
