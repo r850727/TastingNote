@@ -2,6 +2,17 @@ const wineData = [
   {
     "id": 1,
     "category": "威士忌",
+    "tag": "調和威士忌、日本、泥煤味、水楢桶",
+    "name": "厚岸 夏至 單一調和 日本威士忌",
+    "image": "./images/IMG_4214.JPG",
+    "price": 29700,
+    "currency": "JPY",
+    "saketime_rank": "-",
+    "note": ""
+  },
+  {
+    "id": 2,
+    "category": "威士忌",
     "tag": "單一麥芽威士忌、台灣、雪莉桶、無泥煤",
     "name": "噶瑪蘭 層豐雪莉三桶 單一純麥威士忌",
     "image": "./images/IMG_4168.JPG",
@@ -11,7 +22,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 2,
+    "id": 3,
     "category": "威士忌",
     "tag": "單一麥芽威士忌、蘇格蘭高地、雪莉桶、波本桶、無泥煤",
     "name": "大摩 13年",
@@ -22,7 +33,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 3,
+    "id": 4,
     "category": "威士忌",
     "tag": "單一麥芽威士忌、蘇格蘭高地、波本桶、雪莉桶、無泥煤",
     "name": "格蘭傑 稀印",
@@ -33,7 +44,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 4,
+    "id": 5,
     "category": "威士忌",
     "tag": "單一麥芽威士忌、蘇格蘭艾雷島、紅酒桶、泥煤味",
     "name": "波摩 14年 波爾多桶 單一麥芽威士忌",
@@ -44,7 +55,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 5,
+    "id": 6,
     "category": "威士忌",
     "tag": "單一麥芽威士忌、日本、雪莉桶、波本桶、無泥煤",
     "name": "琉歌 2025 Single Malt Japanese Whisky",
@@ -55,7 +66,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 6,
+    "id": 7,
     "category": "威士忌",
     "tag": "調和威士忌、蘇格蘭斯貝賽、雪莉桶、波本桶、無泥煤",
     "name": "皇家禮炮 21年 新奢時尚系列第三代 燦金羽冠",
@@ -66,7 +77,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 7,
+    "id": 8,
     "category": "威士忌",
     "tag": "單一麥芽威士忌、蘇格蘭島嶼區、波特桶、輕泥煤",
     "name": "高原騎士 15年 火神",
@@ -77,24 +88,13 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 8,
+    "id": 9,
     "category": "威士忌",
     "tag": "單一麥芽威士忌、蘇格蘭島嶼區、波本桶、輕泥煤",
     "name": "高原騎士 17年 冰神",
     "image": "./images/IMG_4169.JPG",
     "price": 8600,
     "currency": "TWD",
-    "saketime_rank": "-",
-    "note": ""
-  },
-  {
-    "id": 9,
-    "category": "威士忌",
-    "tag": "調和威士忌、日本、泥煤味、水楢桶",
-    "name": "厚岸 夏至 單一調和 日本威士忌",
-    "image": "",
-    "price": 29700,
-    "currency": "JPY",
     "saketime_rank": "-",
     "note": ""
   },
@@ -585,7 +585,7 @@ const wineData = [
   {
     "id": 54,
     "category": "清酒",
-    "tag": "純米吟釀",
+    "tag": "純米酒",
     "name": "新政 No.6 A-type",
     "image": "./images/IMG_4202.jpg",
     "price": 3500,
@@ -596,7 +596,7 @@ const wineData = [
   {
     "id": 55,
     "category": "清酒",
-    "tag": "純米吟釀",
+    "tag": "純米酒",
     "name": "新政 No.6 S-type",
     "image": "./images/IMG_1265.jpg",
     "price": 20000,
@@ -1213,6 +1213,17 @@ const wineData = [
     "id": 111,
     "category": "清酒",
     "tag": "無特定名稱 / 非公開、生酒",
+    "name": "産土 穂増 四農醸",
+    "image": "",
+    "price": 3980,
+    "currency": "JPY",
+    "saketime_rank": "S+",
+    "note": ""
+  },
+  {
+    "id": 112,
+    "category": "清酒",
+    "tag": "無特定名稱 / 非公開、生酒",
     "name": "産土 香子 六農醸",
     "image": "",
     "price": 8530,
@@ -1221,7 +1232,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 112,
+    "id": 113,
     "category": "清酒",
     "tag": "純米大吟釀",
     "name": "雪の茅舎 純米大吟釀 聽雪",
@@ -1232,7 +1243,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 113,
+    "id": 114,
     "category": "烈酒",
     "tag": "琴酒",
     "name": "KOMASA GIN ほうじ茶",
@@ -1243,7 +1254,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 114,
+    "id": 115,
     "category": "烈酒",
     "tag": "琴酒",
     "name": "RIVO Foraged Gin",
@@ -1254,7 +1265,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 115,
+    "id": 116,
     "category": "烈酒",
     "tag": "琴酒",
     "name": "Sakari Gin 夙川",
@@ -1265,7 +1276,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 116,
+    "id": 117,
     "category": "烈酒",
     "tag": "龍舌蘭",
     "name": "墨西哥 818 Reposado 龍舌蘭",
@@ -1276,7 +1287,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 117,
+    "id": 118,
     "category": "烈酒",
     "tag": "琴酒",
     "name": "火之帆 琴酒",
@@ -1287,7 +1298,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 118,
+    "id": 119,
     "category": "烈酒",
     "tag": "高粱",
     "name": "白水芳華 蘭亭曲\\金門高粱 58度",
@@ -1298,7 +1309,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 119,
+    "id": 120,
     "category": "烈酒",
     "tag": "蘭姆酒",
     "name": "科克蘭 特級蘭姆酒 KIRKLAND SIGNATURE AGED RUM GRAN RESERVA",
@@ -1309,7 +1320,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 120,
+    "id": 121,
     "category": "葡萄酒",
     "tag": "紅酒",
     "name": "2010 Domaine Jacques-Frédéric Mugnier Nuits-Saint-Georges 1er Cru \"Clos de la Maréchale\"",
@@ -1320,7 +1331,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 121,
+    "id": 122,
     "category": "葡萄酒",
     "tag": "香檳",
     "name": "2012 Champagne Louis Brochet HBH Premier Cru",
@@ -1331,7 +1342,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 122,
+    "id": 123,
     "category": "葡萄酒",
     "tag": "白酒",
     "name": "2022 Domaine Dujac Morey-Saint-Denis Blanc",
@@ -1342,7 +1353,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 123,
+    "id": 124,
     "category": "葡萄酒",
     "tag": "香檳",
     "name": "NV (2010) Champagne Inflorescence Blanc de Noirs Lieu-dit \"Côte de Val Vilaine\"",
@@ -1353,7 +1364,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 124,
+    "id": 125,
     "category": "葡萄酒",
     "tag": "氣泡酒",
     "name": "NV Manfredi Asti Spumante DOCG",
@@ -1364,7 +1375,7 @@ const wineData = [
     "note": ""
   },
   {
-    "id": 125,
+    "id": 126,
     "category": "葡萄酒",
     "tag": "白酒",
     "name": "德國約瑟漢 Riesling Qba 法爾茲 甜白葡萄酒",
